@@ -1,0 +1,250 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Animaciones */
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos Header */
+header {
+    text-align: center;
+    padding: 2em;
+    background-color: #4CAF50;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-align: center; /* Centrando el título principal */
+}
+
+header p {
+    font-size: 1.2em;
+    text-align: center; /* Centrar el subtítulo también */
+}
+
+/* Main y Secciones */
+main {
+    flex: 1;
+    padding: 1.5em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 1s ease-out forwards;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Centrando los títulos de cada sección */
+section h2 {
+    color: #4CAF50;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+/* Justificar el texto en cada sección */
+section p {
+    margin-top: 0.5em;
+    color: #555;
+    text-align: justify;
+}
+
+/* Hover efecto */
+section:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #4CAF50;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out 0.5s;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #c0ffb3;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p, section p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 1em;
+    }
+}
+
+section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;  /* Reduce el tamaño al 50% */
+}
+
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4CAF50; /* Añadido borde externo */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #ddd; /* Asegura que las celdas tengan bordes internos */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+td a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+
+  @media (max-width: 768px) {
+    table {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+
+
+
+
+/* Estilos generales para las secciones */
+section {
+    text-align: justify; /* Justifica el texto */
+    font-family: Arial, sans-serif; /* Fuente de texto */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    margin: 20px 0; /* Espaciado vertical entre las secciones */
+  }
+  
+  /* Estilo para los encabezados de cada sección */
+  section h2 {
+    font-size: 1.8em; /* Tamaño del texto del encabezado */
+    font-weight: bold; /* Enfatiza el encabezado */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  /* Estilo general para los párrafos */
+  section p {
+    margin: 10px 0; /* Espaciado superior e inferior en los párrafos */
+  }
+  
+  /* Estilo para las listas */
+  section ul {
+    list-style-type: disc; /* Utiliza viñetas */
+    padding-left: 20px; /* Indentación de la lista */
+    margin: 10px 0; /* Espaciado alrededor de las listas */
+  }
+  
+  /* Estilo para los elementos dentro de las listas */
+  section ul li {
+    margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+    word-wrap: break-word; /* Ajusta el texto largo para que no se desborde */
+    overflow-wrap: break-word; /* Asegura que el texto largo no se desborde */
+    white-space: normal; /* Permite el ajuste automático de las líneas */
+  }
+  
+  /* Estilo opcional para agregar un toque visual en las listas */
+  section ul li {
+    border-left: 3px solid #4CAF50; /* Borde izquierdo verde */
+    padding-left: 10px; /* Espaciado a la izquierda dentro del ítem */
+    margin-left: 10px; /* Desplazamiento a la izquierda de la lista */
+  }
+  
